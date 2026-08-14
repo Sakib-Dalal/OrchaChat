@@ -11,7 +11,7 @@
   Encrypted end-to-end · personal data tokenised on-device · zero-retention Ghost sessions
 
   <p>
-    <img src="https://img.shields.io/badge/version-1.0.2-2D2D2D?style=flat-square" alt="Version 1.0.2"/>
+    <img src="https://img.shields.io/badge/version-1.1.0-2D2D2D?style=flat-square" alt="Version 1.1.0"/>
     <img src="https://img.shields.io/badge/macOS-10.15%2B-2D2D2D?style=flat-square" alt="macOS 10.15+"/>
     <img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20x64-2D2D2D?style=flat-square" alt="Windows 10 or 11 x64"/>
     <img src="https://img.shields.io/badge/licence-proprietary-2D2D2D?style=flat-square" alt="Proprietary licence"/>
@@ -27,7 +27,7 @@
 ---
 
 This repository hosts the **desktop app releases** for Orcha Chat — currently
-**version 1.0.2**, for macOS and Windows. The product itself — including the web app,
+**version 1.1.0**, for macOS and Windows. The product itself — including the web app,
 accounts and subscriptions — lives at **[www.orchachat.com](https://www.orchachat.com)**.
 
 ## What is Orcha Chat?
@@ -61,7 +61,7 @@ languages, keyboard shortcuts.
 
 ## Download
 
-**Version 1.0.2** — released 24 July 2026. The version is in every filename below, so you
+**Version 1.1.0** — released 14 August 2026. The version is in every filename below, so you
 can always tell which build you have. To check an installed copy on macOS:
 
 ```bash
@@ -72,10 +72,10 @@ On Windows, right-click the installed `Orcha Chat.exe` → **Properties** → **
 
 | Platform | File | Size | Notes |
 |---|---|---|---|
-| macOS (Apple Silicon + Intel) | [`Orcha.Chat_1.0.2_universal.dmg`](Orcha.Chat_1.0.2_universal.dmg) | 10 MB | Recommended installer |
-| macOS (archive) | [`Orcha.Chat_universal.app.tar.gz`](Orcha.Chat_universal.app.tar.gz) | 8.9 MB | Plain `.app`, no disk image |
-| Windows 10/11 (x64) | [`Orcha.Chat_1.0.2_x64-setup.exe`](Orcha.Chat_1.0.2_x64-setup.exe) | 3.6 MB | Recommended installer |
-| Windows 10/11 (x64) | [`Orcha.Chat_1.0.2_x64_en-US.msi`](Orcha.Chat_1.0.2_x64_en-US.msi) | 4.5 MB | For managed / silent deployment |
+| macOS (Apple Silicon + Intel) | [`Orcha.Chat_1.1.0_universal.dmg`](Orcha.Chat_1.1.0_universal.dmg) | 9.2 MB | Recommended installer |
+| macOS (archive) | [`Orcha.Chat_universal.app.tar.gz`](Orcha.Chat_universal.app.tar.gz) | 9.1 MB | Plain `.app`, no disk image |
+| Windows 10/11 (x64) | [`Orcha.Chat_1.1.0_x64-setup.exe`](Orcha.Chat_1.1.0_x64-setup.exe) | 3.7 MB | Recommended installer |
+| Windows 10/11 (x64) | [`Orcha.Chat_1.1.0_x64_en-US.msi`](Orcha.Chat_1.1.0_x64_en-US.msi) | 4.6 MB | For managed / silent deployment |
 
 No Linux build yet — use the web app at [www.orchachat.com](https://www.orchachat.com).
 
@@ -105,35 +105,35 @@ follow the same first-launch step.
 
 ### Windows
 
-1. Run `Orcha.Chat_1.0.2_x64-setup.exe` and follow the installer.
+1. Run `Orcha.Chat_1.1.0_x64-setup.exe` and follow the installer.
 2. The build is **not code-signed yet**, so SmartScreen shows a warning. Click
    **More info** → **Run anyway**.
 
 For fleet deployment, use the MSI:
 
 ```bash
-msiexec /i Orcha.Chat_1.0.2_x64_en-US.msi /quiet /norestart
+msiexec /i Orcha.Chat_1.1.0_x64_en-US.msi /quiet /norestart
 ```
 
 ### Verify your download
 
 ```bash
-shasum -a 256 Orcha.Chat_1.0.2_universal.dmg
+shasum -a 256 Orcha.Chat_1.1.0_universal.dmg
 ```
 
 On Windows:
 
 ```bash
-certutil -hashfile Orcha.Chat_1.0.2_x64-setup.exe SHA256
+certutil -hashfile Orcha.Chat_1.1.0_x64-setup.exe SHA256
 ```
 
 Expected values:
 
 ```
-d81f70d3163cb528c93eaadd3e16869c8a89ebc01d763983d10d13ac0b223e83  Orcha.Chat_1.0.2_universal.dmg
-0fea3cec48d408cc32dcb97dd9bf00caf94012a722f92ecd9096ffbf13daaa14  Orcha.Chat_universal.app.tar.gz
-7e0edb5efa44fffe489bb4e8dd5948e123ebcd95fe8ba86a27b90f4a8aa4f5f0  Orcha.Chat_1.0.2_x64-setup.exe
-7860ae918edaa7aa1e3d20c82b171b50c577a85a2cf7a09882a65653552c785a  Orcha.Chat_1.0.2_x64_en-US.msi
+9f3a324ae13e9f4d350fb8af8ae8bc8b768502eba2f4ae40b0b8a5e995bab0f9  Orcha.Chat_1.1.0_universal.dmg
+7d872f0ed0418e39198b9041d91f5833a6b15dc338164c1aa3646061f90ddefc  Orcha.Chat_universal.app.tar.gz
+599e519975770530c64b72598aa986e64204ddee38fd0acd4008eda6dfec81f6  Orcha.Chat_1.1.0_x64-setup.exe
+743983d4a349d1dcc514c8484a6017f4335a2f040a074d226e2f1f31a68f2637  Orcha.Chat_1.1.0_x64_en-US.msi
 ```
 
 Because the bundles are unsigned, these checksums are the only way to confirm you have the
@@ -148,7 +148,7 @@ nothing else.
 
 | | |
 |---|---|
-| Version | 1.0.2 |
+| Version | 1.1.0 |
 | Bundle identifier | `com.sakibdalal.orchachat` |
 | macOS binary | universal (`arm64` + `x86_64`), minimum macOS 10.15 |
 | Windows binary | `x64`, NSIS installer + WiX MSI |
