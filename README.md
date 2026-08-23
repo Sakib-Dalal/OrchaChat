@@ -11,7 +11,7 @@
   Encrypted end-to-end · personal data tokenised on-device · zero-retention Ghost sessions
 
   <p>
-    <img src="https://img.shields.io/badge/version-1.1.0-2D2D2D?style=flat-square" alt="Version 1.1.0"/>
+    <img src="https://img.shields.io/badge/version-1.2.1-2D2D2D?style=flat-square" alt="Version 1.2.1"/>
     <img src="https://img.shields.io/badge/macOS-10.15%2B-2D2D2D?style=flat-square" alt="macOS 10.15+"/>
     <img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20x64-2D2D2D?style=flat-square" alt="Windows 10 or 11 x64"/>
     <img src="https://img.shields.io/badge/licence-proprietary-2D2D2D?style=flat-square" alt="Proprietary licence"/>
@@ -27,7 +27,7 @@
 ---
 
 This repository hosts the **desktop app releases** for Orcha Chat — currently
-**version 1.1.0**, for macOS and Windows. The product itself — including the web app,
+**version 1.2.1**, for macOS and Windows. The product itself — including the web app,
 accounts and subscriptions — lives at **[www.orchachat.com](https://www.orchachat.com)**.
 
 ## What is Orcha Chat?
@@ -41,16 +41,17 @@ desktop app ships the same interface as the web app from a single codebase.
 **Three workspaces**
 
 - **Chat** — a streaming assistant with a live *Tagged / Plain / Encrypted* view of every
-  message, web grounding (DuckDuckGo + india.gov.in), and a zero-retention **Ghost** mode.
+  message, web grounding (DuckDuckGo + india.gov.in), image understanding, and a
+  zero-retention **Ghost** mode.
 - **Notebook** — a chain board: drop in files, links or gov-portal results, then wire
   action nodes into pipelines — summarise → mind-map → translate — plus office tools like
   **redact PII, official letter, RTI reply, meeting minutes**.
-- **Studio** — turn a brief into a finished **PDF / Word / slide deck**, with a
-  per-document output language selector.
+- **Studio** — turn a brief into a finished **PDF / Word / slide deck, official letter or
+  email**, with a per-document output language selector.
 
 **Two assistant tiers** — **Orcha Lite** (fast, everyday) and **Orcha Pro** (deeper
 reasoning, long documents). Pro members pick their default; Notebook and Studio always use
-Orcha Pro.
+Orcha Pro. Every new account starts with a **5-day Pro trial**, no card required.
 
 **Privacy by architecture** — end-to-end encryption, on-device PII tokenisation, Ghost
 sessions that store nothing, and account/data deletion controls.
@@ -61,7 +62,7 @@ languages, keyboard shortcuts.
 
 ## Download
 
-**Version 1.1.0** — released 14 August 2026. The version is in every filename below, so you
+**Version 1.2.1** — released 23 August 2026. The version is in every filename below, so you
 can always tell which build you have. To check an installed copy on macOS:
 
 ```bash
@@ -72,10 +73,10 @@ On Windows, right-click the installed `Orcha Chat.exe` → **Properties** → **
 
 | Platform | File | Size | Notes |
 |---|---|---|---|
-| macOS (Apple Silicon + Intel) | [`Orcha.Chat_1.1.0_universal.dmg`](Orcha.Chat_1.1.0_universal.dmg) | 9.2 MB | Recommended installer |
-| macOS (archive) | [`Orcha.Chat_universal.app.tar.gz`](Orcha.Chat_universal.app.tar.gz) | 9.1 MB | Plain `.app`, no disk image |
-| Windows 10/11 (x64) | [`Orcha.Chat_1.1.0_x64-setup.exe`](Orcha.Chat_1.1.0_x64-setup.exe) | 3.7 MB | Recommended installer |
-| Windows 10/11 (x64) | [`Orcha.Chat_1.1.0_x64_en-US.msi`](Orcha.Chat_1.1.0_x64_en-US.msi) | 4.6 MB | For managed / silent deployment |
+| macOS (Apple Silicon + Intel) | [`Orcha.Chat_1.2.1_universal.dmg`](Orcha.Chat_1.2.1_universal.dmg) | 9.3 MB | Recommended installer |
+| macOS (archive) | [`Orcha.Chat_universal.app.tar.gz`](Orcha.Chat_universal.app.tar.gz) | 9.2 MB | Plain `.app`, no disk image |
+| Windows 10/11 (x64) | [`Orcha.Chat_1.2.1_x64-setup.exe`](Orcha.Chat_1.2.1_x64-setup.exe) | 3.8 MB | Recommended installer |
+| Windows 10/11 (x64) | [`Orcha.Chat_1.2.1_x64_en-US.msi`](Orcha.Chat_1.2.1_x64_en-US.msi) | 4.7 MB | For managed / silent deployment |
 
 No Linux build yet — use the web app at [www.orchachat.com](https://www.orchachat.com).
 
@@ -85,6 +86,8 @@ No Linux build yet — use the web app at [www.orchachat.com](https://www.orchac
 - **Windows 10 or 11, 64-bit**, with WebView2 (preinstalled on Windows 11 and current
   Windows 10; the installer fetches it if missing).
 - An internet connection and an Orcha Chat account.
+- An account signs in on **one device on Free, three on Pro**. Installing on a further
+  machine asks which registered device to replace — you are never locked out.
 
 ## Install
 
@@ -105,35 +108,35 @@ follow the same first-launch step.
 
 ### Windows
 
-1. Run `Orcha.Chat_1.1.0_x64-setup.exe` and follow the installer.
+1. Run `Orcha.Chat_1.2.1_x64-setup.exe` and follow the installer.
 2. The build is **not code-signed yet**, so SmartScreen shows a warning. Click
    **More info** → **Run anyway**.
 
 For fleet deployment, use the MSI:
 
 ```bash
-msiexec /i Orcha.Chat_1.1.0_x64_en-US.msi /quiet /norestart
+msiexec /i Orcha.Chat_1.2.1_x64_en-US.msi /quiet /norestart
 ```
 
 ### Verify your download
 
 ```bash
-shasum -a 256 Orcha.Chat_1.1.0_universal.dmg
+shasum -a 256 Orcha.Chat_1.2.1_universal.dmg
 ```
 
 On Windows:
 
 ```bash
-certutil -hashfile Orcha.Chat_1.1.0_x64-setup.exe SHA256
+certutil -hashfile Orcha.Chat_1.2.1_x64-setup.exe SHA256
 ```
 
 Expected values:
 
 ```
-9f3a324ae13e9f4d350fb8af8ae8bc8b768502eba2f4ae40b0b8a5e995bab0f9  Orcha.Chat_1.1.0_universal.dmg
-7d872f0ed0418e39198b9041d91f5833a6b15dc338164c1aa3646061f90ddefc  Orcha.Chat_universal.app.tar.gz
-599e519975770530c64b72598aa986e64204ddee38fd0acd4008eda6dfec81f6  Orcha.Chat_1.1.0_x64-setup.exe
-743983d4a349d1dcc514c8484a6017f4335a2f040a074d226e2f1f31a68f2637  Orcha.Chat_1.1.0_x64_en-US.msi
+5aa5dbf5d6746e966ec4201e4ba49fded1c34f31e016590560cc52bd5c30cfb2  Orcha.Chat_1.2.1_universal.dmg
+26be0386593c504e569f40d64ce1d1184c5b1341e4028577ce1ed1d2bb1abeba  Orcha.Chat_universal.app.tar.gz
+6a4906e83bfe81780fa0f964b88978f5990b27292513467d433679b766e37288  Orcha.Chat_1.2.1_x64-setup.exe
+7800d55824794c5c31bca9e7e79638edfad8c8c383899b8cb1d400f3b55fc6b5  Orcha.Chat_1.2.1_x64_en-US.msi
 ```
 
 Because the bundles are unsigned, these checksums are the only way to confirm you have the
@@ -148,7 +151,7 @@ nothing else.
 
 | | |
 |---|---|
-| Version | 1.1.0 |
+| Version | 1.2.1 |
 | Bundle identifier | `com.sakibdalal.orchachat` |
 | macOS binary | universal (`arm64` + `x86_64`), minimum macOS 10.15 |
 | Windows binary | `x64`, NSIS installer + WiX MSI |
